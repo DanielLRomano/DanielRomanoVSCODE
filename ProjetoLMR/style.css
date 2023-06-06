@@ -52,10 +52,19 @@ select {
 #inp1 {
     border: rgb(60, 60, 151);
     border-radius: 3px;
-    width: 45vh;   
+    width: 45vh;
 }
 
-option{
+option {
     background-color: white;
     color: black;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+.cards-musica{
+    display: flex;
+    justify-content: space-around;
 }
