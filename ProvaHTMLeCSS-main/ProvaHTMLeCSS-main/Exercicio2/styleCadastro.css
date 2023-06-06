@@ -1,0 +1,30 @@
+h2 {
+    font-size: 50px;
+    font-family: Golos Text;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all {
+    padding: 40px;
+    background: rgb(32, 52, 118);
+    border-radius: 30px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+label {
+    font-size: 20px;
+    font-family: Golos Text;
+    color: azure;
+}
