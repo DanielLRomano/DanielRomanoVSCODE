@@ -35,6 +35,8 @@ public class App {
                         contasPF[contPF] = new ContaPF();
                         contasPF[contPF].setNome(JOptionPane.showInputDialog("Informe o Nome:"));
                         contasPF[contPF].setnCpf(JOptionPane.showInputDialog("Informe o CPF:"));
+                        contasPF[contPF]
+                                .setSalario(Integer.parseInt(JOptionPane.showInputDialog("Informe seu salário:")));
                         contasPF[contPF].setSaldo(0);
                         contasPF[contPF].setnConta(1000 + contPF);
                         JOptionPane.showMessageDialog(null,
@@ -49,6 +51,8 @@ public class App {
                         contasPJ[contPJ] = new ContaPJ();
                         contasPJ[contPJ].setNome(JOptionPane.showInputDialog("Informe o Nome:"));
                         contasPJ[contPJ].setnCnpj(JOptionPane.showInputDialog("Informe o CNPJ:"));
+                        contasPJ[contPJ].setFaturamento(
+                                Integer.parseInt(JOptionPane.showInputDialog("Informe o faturamento:")));
                         contasPJ[contPJ].setSaldo(0);
                         contasPJ[contPJ].setnConta(2000 + contPJ);
                         JOptionPane.showMessageDialog(null,
@@ -98,7 +102,7 @@ public class App {
                             } else if (acao2 == 3) {
                                 contasPF[contaAtualPF].deposito();
                             } else if (acao2 == 4) {
-                                contasPF[contaAtualPF].emprestimo();
+                                contasPF[contaAtualPF].emprestimoPF();
                             } else if (acao2 == 5) {
                                 acessarPF = false;
                             } else {
@@ -129,7 +133,7 @@ public class App {
                             } else if (acao3 == 3) {
                                 contasPJ[contaAtualPJ].deposito();
                             } else if (acao3 == 4) {
-                                contasPJ[contaAtualPJ].emprestimo();
+                                contasPJ[contaAtualPJ].emprestimoPJ();
                             } else if (acao3 == 5) {
                                 acessarPJ = false;
                             } else {

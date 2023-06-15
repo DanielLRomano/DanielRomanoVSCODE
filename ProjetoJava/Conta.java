@@ -51,7 +51,4 @@ public abstract class Conta {
                 + saldo);
     }
 
-    public void emprestimo() {
-    }
-
 }
