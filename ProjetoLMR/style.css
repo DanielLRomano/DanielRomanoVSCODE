@@ -64,7 +64,22 @@ h2 {
     display: flex;
     justify-content: center;
 }
-.cards-musica{
+
+.cards-musica {
     display: flex;
     justify-content: space-around;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
