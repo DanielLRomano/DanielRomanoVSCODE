@@ -11,8 +11,6 @@ public class App {
         boolean aberta = true;
         int contPF = 0;
         int contPJ = 0;
-        int contaAtualPF = 0;
-        int contaAtualPJ = 0;
 
         while (aberta) {
             int acao = Integer.parseInt(
@@ -82,11 +80,12 @@ public class App {
                         int nContaBuscaPF = Integer
                                 .parseInt(JOptionPane.showInputDialog("Informe o nº da conta buscada:"));
                         int i = 0;
-                        while (nContaBuscaPF != contasPF[i].getnConta()) {
-                            contaAtualPF = i;
-                            i++;
+                        for (i = 0; i < contasPF.length; i++) {
+                            if (nContaBuscaPF == contasPF[i].getnConta()) {
+                                JOptionPane.showMessageDialog(null, "Conta Encontrada!");
+                                break;
+                            }
                         }
-                        JOptionPane.showMessageDialog(null, "Conta Encontrada!");
                         boolean acessarPF = true;
                         while (acessarPF) {
                             int acao2 = Integer.parseInt(JOptionPane.showInputDialog("Ação desejada:"
@@ -96,13 +95,13 @@ public class App {
                                     + "\n 4 - Empréstimo."
                                     + "\n 5 - Sair da conta."));
                             if (acao2 == 1) {
-                                JOptionPane.showMessageDialog(null, "Saldo: " + contasPF[contaAtualPF].getSaldo());
+                                JOptionPane.showMessageDialog(null, "Saldo: " + contasPF[i].getSaldo());
                             } else if (acao2 == 2) {
-                                contasPF[contaAtualPF].saque();
+                                contasPF[i].saque();
                             } else if (acao2 == 3) {
-                                contasPF[contaAtualPF].deposito();
+                                contasPF[i].deposito();
                             } else if (acao2 == 4) {
-                                contasPF[contaAtualPF].emprestimoPF();
+                                contasPF[i].emprestimoPF();
                             } else if (acao2 == 5) {
                                 acessarPF = false;
                             } else {
@@ -113,11 +112,12 @@ public class App {
                         int nContaBuscaPJ = Integer
                                 .parseInt(JOptionPane.showInputDialog("Informe o nº da conta buscada:"));
                         int i = 0;
-                        while (nContaBuscaPJ != contasPJ[i].getnConta()) {
-                            contaAtualPJ = i;
-                            i++;
+                        for (i = 0; i < contasPJ.length; i++) {
+                            if (nContaBuscaPJ == contasPJ[i].getnConta()) {
+                                JOptionPane.showMessageDialog(null, "Conta Encontrada!");
+                                break;
+                            }
                         }
-                        JOptionPane.showMessageDialog(null, "Conta Encontrada!");
                         boolean acessarPJ = true;
                         while (acessarPJ) {
                             int acao3 = Integer.parseInt(JOptionPane.showInputDialog("Ação desejada:"
@@ -127,13 +127,13 @@ public class App {
                                     + "\n 4 - Empréstimo."
                                     + "\n 5 - Sair da conta."));
                             if (acao3 == 1) {
-                                JOptionPane.showMessageDialog(null, "Saldo: " + contasPJ[contaAtualPJ].getSaldo());
+                                JOptionPane.showMessageDialog(null, "Saldo: " + contasPJ[i].getSaldo());
                             } else if (acao3 == 2) {
-                                contasPJ[contaAtualPJ].saque();
+                                contasPJ[i].saque();
                             } else if (acao3 == 3) {
-                                contasPJ[contaAtualPJ].deposito();
+                                contasPJ[i].deposito();
                             } else if (acao3 == 4) {
-                                contasPJ[contaAtualPJ].emprestimoPJ();
+                                contasPJ[i].emprestimoPJ();
                             } else if (acao3 == 5) {
                                 acessarPJ = false;
                             } else {
